@@ -1,3 +1,1 @@
-# os
-
-Minimal x86 OS mainly written in Feb 2012.
+Minimal OS written mostly in Feb 2012. Its most functional is a ps/2 keyboard driver.
