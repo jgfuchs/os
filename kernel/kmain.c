@@ -1,5 +1,5 @@
 /*
-	first C code executed
+    first C code executed
 */
 
 #include <con.h>
@@ -16,32 +16,32 @@
 #include <types.h>
 
 void kmain(u32 magic, struct mbd *mbd) {
-	if (magic != MULTIBOOT_MAGIC)
-		return;
+    if (magic != MULTIBOOT_MAGIC)
+        return;
 
-	int_off();
+    int_off();
 
-	con_init();
-	printf("Starting...\n\nVGA console initialized\n");
+    con_init();
+    printf("Starting...\n\nVGA console initialized\n");
 
-	gdt_init();
-	printf("Created GDT\n");
+    gdt_init();
+    printf("Created GDT\n");
 
-	idt_init();
-	printf("Created IDT\n");
+    idt_init();
+    printf("Created IDT\n");
 
-	timer_init();
-	printf("Started timer at %u hz\n", HZ);
+    timer_init();
+    printf("Started timer at %u hz\n", HZ);
 
-	kbd_init();
-	printf("Initialized keyboard\n");
+    kbd_init();
+    printf("Initialized keyboard\n");
 
-	term_init();
-	printf("Initialized terminal\n");
+    term_init();
+    printf("Initialized terminal\n");
 
-	while (1);
+    while (1)
+        ;
 
-	// int_on();
-	// term_start();
+    // int_on();
+    // term_start();
 }
-

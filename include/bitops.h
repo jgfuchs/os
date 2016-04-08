@@ -1,7 +1,6 @@
 /*
-	operations on individual bits
-
-	Feb 2013, Julian Fuchs
+    operations on individual bits
+    Feb 2013, Julian Fuchs
 */
 
 #include <types.h>
@@ -9,12 +8,12 @@
 #ifndef _BITOPS_H_
 #define _BITOPS_H_
 
-#define BIT(n)	(1 << (n))
+#define BIT(n) (1 << (n))
 
-#define SET_BIT(word, n)	(word | BIT(n))
-#define GET_BIT(word, n)	(word & BIT(n))
-#define CLEAR_BIT(word, n)	(word & ~BIT(n))
+#define SET_BIT(word, n) (word | BIT(n))
+#define GET_BIT(word, n) (word & BIT(n))
+#define CLEAR_BIT(word, n) (word & ~BIT(n))
 
-#define FFS(word)	(__builtin_ffs(word))
+#define FFS(word) (__builtin_ffs(word))
 
-#endif //_BITOPS_H_
+#endif  //_BITOPS_H_

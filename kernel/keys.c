@@ -1,6 +1,8 @@
 #include <keys.h>
 #include <types.h>
 
+/* clang-format off */
+
 const struct key_ascii key_ascii_table[KEY__MAX] = {
 	[KEY_TICK] = {'`', '~'},		[KEY_1] = {'1', '!'},
 	[KEY_2] = {'2', '@'},			[KEY_3] = {'3', '#'},
@@ -88,4 +90,3 @@ const char *key_string_table[KEY__MAX] = {
 	[KEY_MUTE] = "KEY_MUTE",			[KEY_VOLUP] = "KEY_VOLUP",
 	[KEY_VOLDOWN] = "KEY_VOLDOWN"
 };
-

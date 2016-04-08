@@ -1,5 +1,5 @@
 /*
-	timer functions, Programmable Interval Timer (PIT) interface
+    timer functions, Programmable Interval Timer (PIT) interface
 */
 
 #ifndef _TIMER_H_
@@ -7,16 +7,16 @@
 
 #include <types.h>
 
-//	ticks per second
+// ticks per second
 #define HZ 40
 
-//	set up PIT
+// set up PIT
 void timer_init();
 
-//	get current tick
+// get current tick
 u32 timer_ticks();
 
-//	sleep for # of milliseconds
+// sleep for # of milliseconds
 void timer_sleep(int ms);
 
-#endif //_TIMER_H_
+#endif  //_TIMER_H_

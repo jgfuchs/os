@@ -1,5 +1,5 @@
 /*
-	codes for every keyboard key, and functions to convert them to ASCII
+    codes for every keyboard key, and functions to convert them to ASCII
 */
 
 #ifndef _KEYS_H_
@@ -7,9 +7,10 @@
 
 #include <cclass.h>
 
-// keycodes, assigned roughly top-left to bottom-right across the keyboard,
-// with all the keys that aren't on my keyboard just put at the end
+// keycodes, assigned roughly top-left to bottom-right across the keyboard, with
+// all the keys that aren't on my keyboard just put at the end
 
+// clang-format off
 #define KEY_NONE		0
 #define KEY_ESC			1
 #define KEY_F1			2
@@ -96,7 +97,7 @@
 #define KEY_RARROW		83
 #define KEY_SCROLLOCK	84
 #define KEY_NUMLOCK		85
-#define KEY_KPSLASH		86		// keypad
+#define KEY_KPSLASH		86		//keypad
 #define KEY_KPSTAR		87
 #define KEY_KPMINUS		88
 #define KEY_KPPLUS		89
@@ -112,10 +113,10 @@
 #define KEY_KP7			99
 #define KEY_KP8			100
 #define KEY_KP9			101
-#define KEY_POWER		102		// ACPI
+#define KEY_POWER		102		//ACPI
 #define KEY_SLEEP		103
 #define KEY_WAKE		104
-#define KEY_MENU		105		// media
+#define KEY_MENU		105		//media
 #define KEY_NEXT		106
 #define KEY_PREV		107
 #define KEY_STOP		108
@@ -124,34 +125,34 @@
 #define KEY_VOLUP		111
 #define KEY_VOLDOWN		112
 
-#define KEY__MAX		128		// approximately
+#define KEY__MAX		128		//approximately
 
 #define KEY__UP			1
 #define KEY__DOWN		2
+// clang-format on
 
 struct key_ascii {
-	char normal;
-	char shifted;
+    char normal;
+    char shifted;
 };
 
 static inline char key_to_ascii(int keycode, int shift) {
-	extern const struct key_ascii key_ascii_table[KEY__MAX];
-	if (keycode < KEY__MAX) {
-		struct key_ascii ka = key_ascii_table[keycode];
-		return shift ? ka.shifted : ka.normal;
-	} else {
-		return 0;
-	}
+    extern const struct key_ascii key_ascii_table[KEY__MAX];
+    if (keycode < KEY__MAX) {
+        struct key_ascii ka = key_ascii_table[keycode];
+        return shift ? ka.shifted : ka.normal;
+    } else {
+        return 0;
+    }
 }
 
 static inline const char *key_to_string(int keycode) {
-	extern const char *key_string_table[KEY__MAX];
-	if (keycode < KEY__MAX) {
-		return key_string_table[keycode];
-	} else {
-		return NULL;
-	}
+    extern const char *key_string_table[KEY__MAX];
+    if (keycode < KEY__MAX) {
+        return key_string_table[keycode];
+    } else {
+        return NULL;
+    }
 }
 
-#endif //_KEYS_H_
-
+#endif  //_KEYS_H_

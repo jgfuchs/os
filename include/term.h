@@ -1,16 +1,16 @@
 /*
-	Rudimentary terminal
+    Rudimentary terminal
 
-	September 2014
+    September 2014
 */
 
 #ifndef _TERM_H_
 #define _TERM_H_
 
-//	initialize
+// initialize
 void term_init();
 
-//	start processing
+// start processing
 void term_start();
 
-#endif //_TERM_H_
+#endif  //_TERM_H_

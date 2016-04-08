@@ -1,5 +1,5 @@
 /*
-	some basic typedefs and the like
+    some basic typedefs and the like
 */
 
 #ifndef _TYPES_H_
@@ -18,9 +18,9 @@ typedef signed int s32;
 typedef unsigned long long int u64;
 typedef signed long long int s64;
 
-#define NULL	((void *) 0)
+#define NULL ((void *)0)
 
-#define TRUE	(1)
-#define FALSE	(0)
+#define TRUE (1)
+#define FALSE (0)
 
-#endif //_TYPES_H_
+#endif  //_TYPES_H_
