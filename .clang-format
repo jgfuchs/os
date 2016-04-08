@@ -1,0 +1,12 @@
+---
+Language: Cpp
+BasedOnStyle: Chromium
+AlignAfterOpenBracket: DontAlign
+BinPackArguments: true
+BinPackParameters: true
+IndentWidth: 4
+PointerAlignment: Right
+ReflowComments: true
+SortIncludes: true
+TabWidth: 4
+...
