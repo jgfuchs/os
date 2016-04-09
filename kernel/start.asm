@@ -4,7 +4,7 @@
 
 ; multiboot constants
 MAGIC equ 0x1BADB002
-MFLAG equ (1 | 2)
+MFLAG equ (1 | 2 | 4)
 
 ; multiboot header
 align 4

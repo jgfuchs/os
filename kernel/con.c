@@ -53,7 +53,7 @@ void con_putc(char ch) {
             cursor_r++;
             break;
         case '\t':
-            cursor_c = (cursor_c + 8) & ~7;
+            cursor_c = (cursor_c + 4) & ~3;
             break;
         case '\b':
             if (cursor_c) {

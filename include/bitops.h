@@ -14,6 +14,4 @@
 #define GET_BIT(word, n) (word & BIT(n))
 #define CLEAR_BIT(word, n) (word & ~BIT(n))
 
-#define FFS(word) (__builtin_ffs(word))
-
 #endif  //_BITOPS_H_

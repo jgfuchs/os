@@ -15,33 +15,29 @@
 #include <timer.h>
 #include <types.h>
 
-void kmain(u32 magic, struct mbd *mbd) {
+void kmain(u32 magic, u32 mbi_addr) {
     if (magic != MULTIBOOT_MAGIC)
         return;
 
     int_off();
 
     con_init();
-    printf("Starting...\n\nVGA console initialized\n");
+    printf("\nVGA output initialized\n");
 
-    gdt_init();
-    printf("Created GDT\n");
+    print_multiboot_info(mbi_addr);
 
-    idt_init();
-    printf("Created IDT\n");
-
-    timer_init();
-    printf("Started timer at %u hz\n", HZ);
-
-    kbd_init();
-    printf("Initialized keyboard\n");
-
-    term_init();
-    printf("Initialized terminal\n");
+    // gdt_init();
+    // printf("Created GDT\n");
+    //
+    // idt_init();
+    // printf("Created IDT\n");
+    //
+    // timer_init();
+    // printf("Started timer at %u hz\n", HZ);
+    //
+    // kbd_init();
+    // printf("Initialized keyboard\n");
 
     while (1)
         ;
-
-    // int_on();
-    // term_start();
 }
